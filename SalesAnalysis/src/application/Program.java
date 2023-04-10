@@ -40,7 +40,7 @@ public class Program {
         	
         	Stream<Sale> sale1 = list.stream().filter(lists -> lists.getSeller().equals("Logan")).filter(lists -> lists.getMonth() ==1 || lists.getMonth()==7);        	
         	System.out.println();        	
-        	double val = sale1.map(lists -> lists.getTotal()).reduce(0.0, (x, y) -> x+y).doubleValue();
+        	double val = sale1.map(lists -> lists.getTotal()).reduce(0.0, (x, y) -> x+y);
         	
         	System.out.println("Valor total vendido pelo vendedor Logan nos meses 1 e 7 = " + val);
         	
